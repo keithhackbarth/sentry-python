@@ -185,8 +185,7 @@ class SentryAsyncExtension(SchemaExtension):  # type: ignore
             )
         else:
             self.graphql_span = sentry_sdk.start_transaction(
-                name=op,
-                description=description,
+                name=description,
                 origin=StrawberryIntegration.origin,
             )
 
